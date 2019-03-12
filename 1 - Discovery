@@ -36,6 +36,12 @@ DNS_LOOKUP_AD.sh
  Vulners Script
      # nmap -sV --script=vulners 10.11.1.39
      
+ -------------- Unicorn Scan -------------- 
+     Unicorn TCP
+         # unicornscan -r200 192.168.28.67:1-65000 -v -mT  
+     Unicorn UDP
+         # unicornscan -r200 192.168.28.67:1-65000 -v -mU 
+     
  -------------- Ping Sweep --------------
      # ping -c 1 10.0.0.69 >> /dev/null && echo Online
      # for ip in $(seq 1 5); do ping -c 10.0.0.$ip > dev/null && echo "Online 10.0.0.$ip"; done 
@@ -47,4 +53,32 @@ DNS_LOOKUP_AD.sh
  Hping3 to unlock.   
      # hping3 -S <IP ADDRESS> -p <PORT 1> -c 1; hping3 -S <IP ADDRESS> -p L<IP ADDRESS <PORT 2> -c 1; hping3 -S <IP ADDRESS> -p <PORT 2> -c 1
      
+  -------------- Enum4Linux --------------
+  enum4Linux -a <IP ADDRESS>
+  
+  -------------- Find Hidden Directories --------------
+  Find .
+  
+  -------------- Directory and File Permissions --------------
+  ls -lah /home
+  
+  -------------- Banner Grabbing --------------
+  NC <IPADDRESS> <PORT> 
+  
+  -------------- DB_MAP --------------
+  # db_nmap -e tap0 -n -v -Pn -sV -sC --version-light -A –p 
+  # db_nmap -e tap0 -n -v -Pn -sV -sC --version-light -A -sU -p 
+
+  -------------- Subdomain Check --------------
+  Massscan
+     # ++++++++++ need ++++++++++
+  Sublist3r
+     # python3 sublist3r.py -v -d target.com
+  
+  -------------- Subdomain Check --------------
+  Network
+     Vanquish - Auto recon + exploit suggester
+     Are there any NETBIOS, SMB, RPC ports discovered?
+  RPC 
+     # rpcclient <ip address> -U “” -N 
      
