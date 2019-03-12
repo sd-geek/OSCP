@@ -81,4 +81,11 @@ DNS_LOOKUP_AD.sh
      Are there any NETBIOS, SMB, RPC ports discovered?
   RPC 
      # rpcclient <ip address> -U “” -N 
+     # rpcinfo: What services are running? Rpcinfo -p <target ip> 
      
+  Wireshark
+     Use Wireshark / tcpdump to capture traffic on the target host: 
+     # tcpdump -i tap0 host <target-ip> tcp port 80 and not arp and not icmp -vv
+     
+  Fuzzing
+     # sfuzz -S 192.168.1.1 -p 10443 -T -f /usr/share/sfuzz/sfuzz-sample/basic.http 
