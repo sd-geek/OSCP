@@ -1,0 +1,50 @@
+OSCP Tips
+
+################## Discovery##################
+
+-------------- Arp Scan --------------
+  arp-scan --interface=eth1 192.168.187.1/24 
+  
+DNS_LOOKUP_AD.sh
+  ++++++++++ need ++++++++++
+ 
+ -------------- NMAP --------------
+ Initial ping scan
+     # nmap -sn <IP ADDRESS RANGE> -oA initialpingscan
+     
+ Fast Full Scan
+     # nmap -sS --min-rate 5000 --max-retries 1 -p- <IP ADDRESS>
+     
+ Scripts and Verbose
+     # nmap -sC -sV -p <PORTS> <IP ADDRESS> 
+ 
+ --------------NMAP Scripts --------------
+ Standard scans
+  
+     TCP SCAN  
+         # nmap -sC -sV -oA -ip- 
+         # nmap -Pn -p- -vv -ip- 
+
+     UDP SCAN 
+         # Nmap -Pn -p- -sU -vv -ip- 
+ 
+ Vuln Script
+     https://nmap.org/nsedoc/ -- scripts 
+     # Nmap -Pn -sV -O -pT:{TCP ports found in step 1},U:{UDP ports found in step 1} -script *vuln* <ip address> 
+     Grab banners manually for more clarity: nc -nv <ip-address> <port> 
+     
+ Vulners Script
+     # nmap -sV --script=vulners 10.11.1.39
+     
+ -------------- Ping Sweep --------------
+     # ping -c 1 10.0.0.69 >> /dev/null && echo Online
+     # for ip in $(seq 1 5); do ping -c 10.0.0.$ip > dev/null && echo "Online 10.0.0.$ip"; done 
+     # for ip in $(seq 1 5); do ping -c 1 192.168.187.$ip > /dev/null && echo "Online 192.168.187.$ip"; done 
+     
+ -------------- Port Knocking --------------
+ Check existing port to find any other ports needed.
+     # nc -vn <IP> <port>
+ Hping3 to unlock.   
+     # hping3 -S <IP ADDRESS> -p <PORT 1> -c 1; hping3 -S <IP ADDRESS> -p L<IP ADDRESS <PORT 2> -c 1; hping3 -S <IP ADDRESS> -p <PORT 2> -c 1
+     
+     
