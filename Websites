@@ -1,3 +1,95 @@
 https://hub.packtpub.com/metasploit-custom-modules-and-meterpreter-scripting/
+---
 https://github.com/yeyintminthuhtut/Awesome-Red-Teaming/blob/master/README.md#-credential-access
 https://github.com/yeyintminthuhtut/Awesome-Red-Teaming/blob/master/README.md
+---
+https://github.com/so87/OSCP-PwK/blob/master/Penetration%20Testing%20Tools.pdf
+https://github.com/so87/OSCP-PwK
+---
+http://www.fuzzysecurity.com/tutorials/16.html
+---
+RDP
+https://github.com/portcullislabs/rdp-sec-check
+---
+Buffer Overflow
+https://www.vortex.id.au/2017/05/pwkoscp-stack-buffer-overflow-practice/
+---
+Unicorn scan
+https://github.com/superkojiman/onetwopunch
+---
+OSCP Cheatsheet 
+https://highon.coffee/blog/nmap-cheat-sheet/
+https://archive.org/stream/OffensiveSecurity-PenetrationTestingWithBacktracklabGuidev3.2/OffensiveSecurity-PenetrationTestingWithBacktracklabGuidev3.2_djvu.txt
+
+---
+Multipass ???
+https://github.com/ucki/multipass/blob/master/multipass.sh
+---
+https://github.com/ucki/lazypentest
+---
+Converting metasploit modeules to standalone
+https://netsec.ws/?p=262
+---
+Telnet
+https://www.hackingarticles.in/penetration-testing-telnet-port-23/
+---
+Bruteforcing
+https://www.top-password.com/blog/crack-windows-password-with-john-the-ripper/
+---
+sam file
+https://forums.kali.org/showthread.php?27945-Problem-using-bkhive
+https://prakharprasad.com/windows-password-cracking-using-john-the-ripper/
+https://medium.com/@petergombos/lm-ntlm-net-ntlmv2-oh-my-a9b235c58ed4
+https://seclists.org/fulldisclosure/2002/Sep/61
+---
+https://github.com/ferreirasc/oscp/blob/master/wordlists/windows_interesting_files
+https://github.com/ferreirasc/oscp/blob/master/wordlists/unix_users.txt
+https://github.com/ferreirasc/oscp/blob/master/wordlists/dirfuzzing.txt
+https://github.com/ferreirasc/oscp/tree/master/wordlists
+https://github.com/doffensive/wired-courtyard
+https://github.com/pythonmaster41/Go-For-OSCP
+https://github.com/CyDefUnicorn/OSCP-Archives
+https://github.com/adon90/pentest_compilation
+https://github.com/danielmiessler/SecLists
+https://github.com/burntmybagel/OSCP-Prep
+https://github.com/rhodejo/OSCP-Prep
+https://github.com/garyhooks/oscp
+https://github.com/xapax/oscp (reconscan)
+https://github.com/slyth11907/Cheatsheets
+https://github.com/vulnersCom/nmap-vulners
+https://github.com/vulnersCom/nmap-vulners/blob/master/vulners.nse
+https://github.com/vulnersCom/vulners-agent
+https://github.com/fuzzdb-project/fuzzdb
+https://github.com/ibr2/pwk-cheatsheet/blob/master/linux-template.md
+https://github.com/ibr2/pwk-cheatsheet#file-inclusion-vulnerabilities
+https://github.com/ibr2/pwk-cheatsheet#database-vulnerabilities
+https://github.com/emilyanncr/Windows-Post-Exploitation
+https://github.com/mainframed/nmapdb
+https://github.com/BloodHoundAD/BloodHound/releases
+---
+http://niiconsulting.com/checkmate/2016/02/hunting-passwords-in-sysvol/
+
+---
+https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html
+https://gist.github.com/unfo/5ddc85671dcf39f877aaf5dce105fac3 (how to pass oscp)
+https://medium.com/@cosmin.ciobanu/the-only-oscp-advice-you-will-need-ae141060b87c
+
+---
+https://securitypentester.ninja/category/cheat-sheets/
+https://pastebin.com/kdc6th08
+https://pastebin.com/Gu19n1dt
+---
+sql
+https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/
+
+https://raw.githubusercontent.com/sensepost/heartbleed-poc/master/heartbleed-poc.py
+https://hackingandsecurity.blogspot.com/2017/08/go-for-oscp.html
+https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/
+
+https://hackingandsecurity.blogspot.com/2017/09/oscp-windows-priviledge-escalation.html?m=1
+https://hausec.com/pentesting-cheatsheet/#_Toc475368980
+https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/#vulnerability-assessment
+https://gist.github.com/kkirsche/75a8b48e58f80223f4a73c18739446dd
+https://hackingandsecurity.blogspot.com/2017/08/go-for-oscp.html
+https://securism.wordpress.com/oscp-notes-information-gathering/
+
