@@ -1,0 +1,67 @@
+Set the Target IP Address to the $ip system variable
+     # export ip=192.168.1.100
+
+Find the location of a file
+     # locate sbd.exe
+
+Search through directories in the $PATH environment variable
+     # which sbd
+
+Find a search for a file that contains a specific string in it’s name
+     # find / -name sbd\*
+
+Show active internet connections
+     # netstat -lntp
+
+Change Password
+     # passwd
+
+Verify a service is running and listening
+     # netstat -antp |grep apache
+
+Start a service
+     # systemctl start ssh
+     # systemctl start apache2
+
+Unzip a gz file
+     # gunzip access.log.gz
+
+Unzip a tar.gz file
+     # tar -xzvf file.tar.gz
+
+Search command history
+     # history | grep phrase\_to\_search\_for
+
+Have a service start at boot
+     # systemctl enable ssh
+
+Stop a service
+     # systemctl stop ssh
+
+Download a webpage
+     # wget [www.cisco.com](http://www.cisco.com)
+     
+Open a webpage
+     # `curl www.cisco.com
+
+String manipulation
+     Count number of lines in file
+     # wc index.html
+
+Get the start or end of a file
+     # head index.html tail index.html
+
+Extract all the lines that contain a string
+     #grep "href=" index.html
+
+Cut a string by a delimiter, filter results then sort
+     # grep "href=" index.html | cut -d "/" -f 3 | grep "\\." | cut -d '"' -f 1 | sort -u
+
+Using Grep and regular expressions and output to a file
+     # cat index.html | grep -o 'http://\[^"\]\*' | cut -d "/" -f 3 | sort –u &gt; list.txt
+
+Use a bash loop to find the IP address behind each host
+     # for url in $(cat list.txt); do host $url; done
+
+Collect all the IP Addresses from a log file and sort by frequency
+     # cat access.log | cut -d " " -f 1 | sort | uniq -c | sort -urn
