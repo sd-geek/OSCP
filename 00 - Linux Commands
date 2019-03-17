@@ -65,3 +65,7 @@ Use a bash loop to find the IP address behind each host
 
 Collect all the IP Addresses from a log file and sort by frequency
      # cat access.log | cut -d " " -f 1 | sort | uniq -c | sort -urn
+
+IPTables deny traffic to ports except for Local Loopback
+           # iptables -A INPUT -p tcp --destination-port 13327 \\! -d $ip -j DROP
+           # iptables -A INPUT -p tcp --destination-port 4444 \\! -d $ip -j DROP
