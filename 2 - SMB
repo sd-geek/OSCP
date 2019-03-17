@@ -1,0 +1,11 @@
+nbtscan <[SUBNET]>
+
+nmap -p139,445 --script smb-enum-users <[SUBNET]>
+
+nmap -p139,445 --script=smb-vuln-* --script-args=unsafe=1 <[SUBNET]>
+
+enum4linux
+
+smbclient -L <[IP]> -N
+
+smbclient \\<[IP]>\share -N
