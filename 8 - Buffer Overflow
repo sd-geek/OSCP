@@ -1,0 +1,3 @@
+---------------- Buffer Overflow ----------------
+     /usr/share/metasploit-framework/tools/pattern_create.rb <[LENGTH]>
+     /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -<[ADDRESS]>
