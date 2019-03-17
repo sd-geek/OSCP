@@ -83,4 +83,22 @@ From within vi:
 From within nmap:
 !sh
 
+----------------- Websites -----------------
 
+Pen test monkey PHP reverse shell
+http://pentestmonkey.net/tools/web-shells/php-reverse-shel
+
+php-findsock-shell - turns PHP port 80 into an interactive shell
+http://pentestmonkey.net/tools/web-shells/php-findsock-shell
+
+Perl Reverse Shell
+http://pentestmonkey.net/tools/web-shells/perl-reverse-shell
+
+PHP powered web browser Shell b374k with file upload etc.
+https://github.com/b374k/b374k
+
+Windows reverse shell - PowerSploit’s Invoke-Shellcode script and inject a Meterpreter shell https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-Shellcode.ps1
+
+Web Backdoors from Fuzzdb ( https://github.com/fuzzdb-project/fuzzdb/tree/master/web-backdoors
+
+Creating Meterpreter Shells with MSFVenom - http://www.securityunlocked.com/2016/01/02/network-security-pentesting/most-useful-msfvenom-payloads/
