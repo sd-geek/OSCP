@@ -9,6 +9,9 @@ DNS_LOOKUP_AD.sh
   ++++++++++ need ++++++++++
  
  -------------- NMAP --------------
+ Zone Transfer
+     # dnsrecon -t axfr -d <DOMAIN>
+ 
  Initial ping scan
      # nmap -sn <IP ADDRESS RANGE> -oA initialpingscan
      
@@ -17,6 +20,8 @@ DNS_LOOKUP_AD.sh
      
  Scripts and Verbose
      # nmap -sC -sV -p <PORTS> <IP ADDRESS> 
+     
+
  
  --------------NMAP Scripts --------------
  Standard scans
@@ -35,6 +40,9 @@ DNS_LOOKUP_AD.sh
      
  Vulners Script
      # nmap -sV --script=vulners 10.11.1.39
+     
+ Check for vulnerablities
+     # nmap -sS -sV -A -O --script="*-vuln-*" --script-args=unsafe=1 <Target IP>
      
  -------------- Unicorn Scan -------------- 
      Unicorn TCP
