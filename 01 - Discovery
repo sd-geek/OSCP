@@ -1,6 +1,23 @@
-OSCP Tips
-
 ################## Discovery##################
+-------------- Google -------------- 
+Google search to find website sub domains
+      site:microsoft.com site:[www.microsoft.com](http://www.microsoft.com)
+
+Google filetype, and intitle
+      intitle:”netbotz appliance” “OK” -filetype:pdf
+
+Google inurl
+      inurl:”level/15/sexec/-/show”
+
+Google Hacking Database:
+      https://www.exploit-db.com/google-hacking-database/
+     
+-------------- Email Harvesting --------------
+Simply Email
+     # git clone https://github.com/killswitch-GUI/SimplyEmail.git ./SimplyEmail.py -all -e TARGET-DOMAIN     
+  
+-------------- Whois Enumeration --------------
+     whois domain-name-here.com whois $ip
 
 -------------- Arp Scan --------------
   arp-scan --interface=eth1 192.168.187.1/24 
@@ -62,26 +79,59 @@ DNS_LOOKUP_AD.sh
      # hping3 -S <IP ADDRESS> -p <PORT 1> -c 1; hping3 -S <IP ADDRESS> -p L<IP ADDRESS <PORT 2> -c 1; hping3 -S <IP ADDRESS> -p <PORT 2> -c 1
      
   -------------- Enum4Linux --------------
-  enum4Linux -a <IP ADDRESS>
+  # enum4Linux -a <IP ADDRESS>
   
   -------------- Find Hidden Directories --------------
-  Find .
+  # Find .
   
   -------------- Directory and File Permissions --------------
-  ls -lah /home
+  # ls -lah /home
   
   -------------- Banner Grabbing --------------
-  NC <IPADDRESS> <PORT> 
+  # NC <IPADDRESS> <PORT> 
+  # nc -v <IPADDRESS> <PORT>
+  # telnet <IPADDRESS> <PORT>
+  
+  -------------- Recon-ng --------------
+  # git clone https://LaNMaSteR53@bitbucket.org/LaNMaSteR53/recon-ng.git  
+  # cd /opt/recon-ng
+  # ./recon-ng show modules help
   
   -------------- DB_MAP --------------
   # db_nmap -e tap0 -n -v -Pn -sV -sC --version-light -A –p 
   # db_nmap -e tap0 -n -v -Pn -sV -sC --version-light -A -sU -p 
 
-  -------------- Subdomain Check --------------
+  -------------- DNS --------------
   Massscan
      # ++++++++++ need ++++++++++
   Sublist3r
      # python3 sublist3r.py -v -d target.com
+  
+  Host Lookup
+     # host -t ns megacorpone.com
+
+  Reverse Lookup Brute Force - find domains in the same range
+     # for ip in $(seq 155 190);do host 50.7.67.$ip;done |grep -v "not found"
+     
+  Perform MX Record Lookup
+     # dig mx domain-name-here.com @nameserver
+  
+  Perform Zone Transfer with DIG
+     # dig axfr domain-name-here.com @nameserver
+  
+  DNS Zone Transfers
+         Windows DNS zone transfer
+             # nslookup -&gt; set type=any -&gt; ls -d blah.com Linux DNS zone transfer
+             # dig axfr blah.com @ns1.blah.com
+  
+  Dnsrecon DNS Brute Force
+     # dnsrecon -d TARGET -D /usr/share/wordlists/dnsmap.txt -t std --xml ouput.xml
+     
+  Dnsrecon DNS List of megacorp
+     # dnsrecon -d megacorpone.com -t axfr
+  
+  DNSEnum
+     # dnsenum zonetransfer.me
   
   -------------- Subdomain Check --------------
   Network
