@@ -1,1 +1,19 @@
-Empty
+---------------- Linux OS Enumeration ----------------
+
+List all SUID files
+    # find / -perm -4000 2&gt;/dev/null
+
+Determine the current version of Linux
+    # cat /etc/issue
+
+Determine more information about the environment
+    # uname -a
+
+List processes running
+    # ps -xaf
+
+List the allowed (and forbidden) commands for the invoking use
+    # sudo -l
+
+List iptables rules
+    # iptables --table nat --list iptables -vL -t filter iptables -vL -t nat iptables -vL -t mangle iptables -vL -t raw iptables -vL -t security
