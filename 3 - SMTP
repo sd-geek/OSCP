@@ -1,0 +1,5 @@
+nmap -p25 <[SUBNET]> --open
+
+nc -nv IP 25
+
+VRFY <[USERNAME]>
