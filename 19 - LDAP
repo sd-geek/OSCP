@@ -1,1 +1,1 @@
- ldapsearch -h 10.11.1.220 -p 389 -x -s base -b '' "(objectClass=*)" "*" +
+ ldapsearch -h <IP ADDRESS> -p 389 -x -s base -b '' "(objectClass=*)" "*" +
