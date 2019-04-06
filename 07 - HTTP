@@ -1,6 +1,8 @@
 -------------------- HTTP Enumeration --------------------
 Search for folders with gobuster:
      # gobuster -w /usr/share/wordlists/dirb/common.txt -u $ip
+     # gobuster -u http://$IP -w /usr/share/seclists/Discovery/Web_Content/Top1000-RobotsDisallowed.txt
+     # gobuster -u http://$IP -w /usr/share/seclists/Discovery/Web_Content/common.txt
 Dirb - Directory brute force finding using a dictionary file
      # dirb http://$ip/ wordlist.dict dirb <http://vm/>
 Dirb against a proxy
