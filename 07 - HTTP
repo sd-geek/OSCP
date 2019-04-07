@@ -176,3 +176,9 @@ Stealing Cookies and Session Information
 Browser Redirection and IFRAME Injection
 <iframe SRC="http://$ip/report" height = "0" width ="0"></iframe>
 
+-------------------- Drupal --------------------
+Droopescan
+     Apt-get install python-pip
+     pip install droopsescan
+          droopescan scan drupal -u <IP ADDRESS>
+
