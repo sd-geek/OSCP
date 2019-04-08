@@ -11,7 +11,7 @@ Get Options available from web server
      # curl -vX OPTIONS vm/test
 Uniscan directory finder:
      # uniscan -qweds -u <http://vm/>   
-     
+
 -------------------- Nikto --------------------
 Nikto Basic
      nikto -h $ip
@@ -50,6 +50,9 @@ Wfuzz - The web brute forcer
 wfuzz -c -w /usr/share/wfuzz/wordlist/general/megabeast.txt $ip:60080/?FUZZ=test 
 wfuzz -c --hw 114 -w /usr/share/wfuzz/wordlist/general/megabeast.txt $ip:60080/?page=FUZZ 
 wfuzz -c -w /usr/share/wfuzz/wordlist/general/common.txt "$ip:60080/?page=mailer&mail=FUZZ"
+
+-------------------- Extract link from webpage --------------------
+cat index.html | grep "href=" | cut -d "/" -f3| grep "<[DOMAIN]>" | cut -d '"' -f1 | sort -u
 
 -------------------- Web Shells --------------------
 http://tools.kali.org/maintaining-access/webshells
