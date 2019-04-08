@@ -64,9 +64,13 @@ DNS_LOOKUP_AD.sh
  -------------- Unicorn Scan -------------- 
      Unicorn TCP
          # unicornscan -r200 192.168.28.67:1-65000 -v -mT  
+         # unicornscan -i tap0 -I -mT $IP:a
+         # db_nmap -e tap0 -n -v -Pn -sV -sC --version-light -A -p
      Unicorn UDP
          # unicornscan -r200 192.168.28.67:1-65000 -v -mU 
-     
+         # unicornscan -i tap0 -I -mU $IP:a
+         # db_nmap -e tap0 -n -v -Pn -sV -sC --version-light -A -sU -p
+         
  -------------- Ping Sweep --------------
      # ping -c 1 10.0.0.69 >> /dev/null && echo Online
      # for ip in $(seq 1 5); do ping -c 10.0.0.$ip > dev/null && echo "Online 10.0.0.$ip"; done 
