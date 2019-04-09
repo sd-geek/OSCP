@@ -1,0 +1,25 @@
+Encryption Types
+Decode using  https://www.dcode.fr/
+
+----------------------- LOOK -----------------------
+look encoded string exampel
+https://www/dcode.fr/language-ook
+..... ..... ..... .!?!! .?... ..... ..... ...??. ..... ..... ..... !!!!! !!?!?! ..... .....
+
+----------------------- BASE64 -----------------------
+base64 encoding
+# echo test | base64
+  dGVzdAo=   ( Base64 can divide into 4 character sets | dGVz dAo= | )
+# echo dGVzdAo= | base64 -d
+  test
+  
+----------------------- HEX -----------------------  
+# echo -n $'\x12\x34' | xxd -p
+ 1234
+# echo -n $'\x12\x34' | hexdump -e '"%x"'
+3412
+
+----------------------- BRAINFUCK -----------------------  
+https://www.dcode.fr/brainfuck-language
++++++ +++++ [->++ +++++ +++<] +.--- --.++ +++++ .<+
+
