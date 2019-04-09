@@ -2,3 +2,8 @@ Listing of config files to check for username/passwords/database info.
 
 Wordpress Config - username/password/db info
   # cat /var/www/html/wp-config.php
+  
+nginx config file
+  /etc/nginx/sites-available/default
+    Look for .htpasswd file
+      USERNAME:$apr1$<HASH>
