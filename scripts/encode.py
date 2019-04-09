@@ -7,3 +7,4 @@ for i in range(100):
       f = open("dict.txt", "a+")
       f.write(dir+"\r\n")
       f.close()
+ 
