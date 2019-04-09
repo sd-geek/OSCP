@@ -37,7 +37,7 @@ class BadUsername(Exception):
 # create malicious "add_boolean" function to malform packet
 def add_boolean(*args, **kwargs):
     pass
-
+ 
 # create function to call when username was invalid
 def call_error(*args, **kwargs):
     raise BadUsername()
