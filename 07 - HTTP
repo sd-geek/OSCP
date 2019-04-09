@@ -1,3 +1,7 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ALWAYS READ THE SOURCE CODE OF A WEBSITE LOOK FOR COMMENTS <!-- comments -->
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 -------------------- HTTP Enumeration --------------------
 Search for folders with gobuster:
      # gobuster -w /usr/share/wordlists/dirb/common.txt -u $ip
