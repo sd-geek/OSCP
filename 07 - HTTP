@@ -1,6 +1,8 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ALWAYS READ THE SOURCE CODE OF A WEBSITE LOOK FOR COMMENTS <!-- comments -->
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Check Javascript .js for username/passwords
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 -------------------- HTTP Enumeration --------------------
 Search for folders with gobuster:
