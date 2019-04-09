@@ -1,0 +1,3 @@
+Listing of config files to check for username/passwords/database info.
+
+/var/www/html/wp-config.php
