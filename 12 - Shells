@@ -102,3 +102,12 @@ Windows reverse shell - PowerSploit’s Invoke-Shellcode script and inject a Met
 Web Backdoors from Fuzzdb ( https://github.com/fuzzdb-project/fuzzdb/tree/master/web-backdoors
 
 Creating Meterpreter Shells with MSFVenom - http://www.securityunlocked.com/2016/01/02/network-security-pentesting/most-useful-msfvenom-payloads/
+
+----------------- webshell upload -----------------
+
+Upload php shell as gif
+     Edit the php file and add GIF98 at the top.
+          GIF98
+          <?PHP
+          // this is the contents of the script
+     
