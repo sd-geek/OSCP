@@ -1,0 +1,19 @@
+Password bruteforcing
+/usr/share/wordlists/rockyou.txt
+/usr/share/seclists/Passwords/darkweb2017-top10.txt
+/usr/share/seclists/Passwords/darkweb2017-top100.txt
+/usr/share/seclists/Passwords/darkweb2017-top1000.txt
+/usr/share/seclists/Passwords/darkweb2017-top10000.txt
+/usr/share/seclists/Passwords/darc0de.txt
+
+
+Directory bruteforcing
+/usr/share/dirbuster/wordlists/directory-list-lowercase-2.3-small.txt
+/usr/share/dirbuster/wordlists/directory-list-lowercase-2.3-medium.txt
+/usr/share/wordlists/dirb/big.txt
+
+Username bruteforcing
+/usr/share/seclists/Usernames/Names/names.txt
+/usr/share/seclists/Usernames/Names/femalenames-usa-top1000.txt
+/usr/share/seclists/Usernames/Names/malenames-usa-top1000.txt
+/usr/share/seclists/Usernames/Names/familynames-usa-top1000.txt
