@@ -1,3 +1,6 @@
 View contents of shorcuts file.lnk
 strings files.link
   c:\windows\system32\something.exe
+
+Run xml on windows
+  # c:\windows\microsoft.net\framework\v4.0.30319\msbuild.exe xmlfile.xml
