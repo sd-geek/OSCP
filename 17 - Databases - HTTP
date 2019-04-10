@@ -30,6 +30,11 @@ Connect to MySQL
     # show databases;
     # show tables;
         # select * from <DatabaseName>;
+        
+SQL injection sign up registration - register.php
+    Username: ' or 1='1
+    Password: ' or 1='1
+    Confirm password: ' or 1='1
     
 -------------------- Enumerating the Database --------------------
 Enumerating the Database
