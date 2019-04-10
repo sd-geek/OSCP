@@ -1,0 +1,3 @@
+puttygen my_private_key.ppk -O private-openssh -o id_rsa
+chmod 600 id_rsa
+ssh -i id_rsa <USERNAME>@<IP ADDRESS>
