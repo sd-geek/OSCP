@@ -138,6 +138,7 @@ Passing the Hash in Windows
 
 Cracking zip file password
      # fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u <filename>.zip
+     # frackzip -D -v -u -p /usr/share/wordlists/rockyou.txt <file>
 
 Cracking 7zip 
      # ./7x2john.pl file.7z > 7zhash
