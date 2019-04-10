@@ -11,3 +11,6 @@ nginx config file
   /etc/nginx/sites-available/default
     Look for .htpasswd file
       USERNAME:$apr1$<HASH>
+
+Bash History
+  .bash_history
