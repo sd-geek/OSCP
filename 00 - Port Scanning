@@ -136,3 +136,8 @@ https://www.trustedsec.com/march-2013/new-tool-release-rpc_enum-rid-cycling-atta
 Manual Null Session Testing
      # Windows: net use \\\\$ip\\IPC$ "" /u:""
      # Linux: smbclient -L //$ip
+
+IPV6 Enyx.git
+    # git clone https://github.com/trickster0/Enyx.git
+    # python enyx.py 2c public <IPV4 Address>
+   
