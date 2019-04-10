@@ -1,3 +1,6 @@
  ldapsearch -h <IP ADDRESS> -p 389 -x -s base -b '' "(objectClass=*)" "*" +
 
 nmap -p 88 --script=krb5-enum-users --script-args krb5-enum-users.realm='domain.local',userdb=/usr/share/seclists/Usernames/Names/names.txt <IP ADDRESS>
+
+LDAP Search - Possible users and hashes
+nmap -p389 --script=ldap-search <IP ADDRESS>
