@@ -56,7 +56,7 @@ DNS_LOOKUP_AD.sh
      Grab banners manually for more clarity: nc -nv <ip-address> <port> 
      
  Vulners Script
-     # nmap -sV --script=vulners 10.11.1.39
+     # nmap -sV --script=vulners <IP Address>
      
  Check for vulnerablities
      # nmap -sS -sV -A -O --script="*-vuln-*" --script-args=unsafe=1 <Target IP>
