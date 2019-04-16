@@ -10,6 +10,9 @@ Steps: nmap scan udp 161, create target IP list, create community list file, use
 SNMPv3 Enumeration
      # nmap -sV -p 161 --script=snmp-info $ip/24
      
+NNMAP SNMP scan
+     # nmap -sU -sV -p 161 -n <IP ADDRESS> --script="snmp-netstat" -- script-args="cnmpcommunity=public"
+     
 Automate the username enumeration process for SNMPv3:
      # apt-get install snmp snmp-mibs-downloader 
      # wget <https://raw.githubusercontent.com/raesene/TestingScripts/master/snmpv3enum.rb>
