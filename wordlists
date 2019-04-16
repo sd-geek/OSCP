@@ -18,4 +18,5 @@ Username bruteforcing
 /usr/share/seclists/Usernames/Names/malenames-usa-top1000.txt
 /usr/share/seclists/Usernames/Names/familynames-usa-top1000.txt
 
- 
+Cewl - Extracting words from a website to build a wordlist.
+ # cewl http://<website>/
