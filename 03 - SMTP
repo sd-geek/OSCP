@@ -5,3 +5,5 @@ nc -nv IP 25
 VRFY <[USERNAME]>
 
 smtp-user-enum -M VRFY -D <DomainName> -U <UserName List>.txt -t <Target>
+
+for user in $(cat users.txt); do echo VRFY $user | nc -nv -w <IP ADDRESS> 25 2>/dev/null |grep ^"250";done
