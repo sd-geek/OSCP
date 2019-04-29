@@ -24,6 +24,9 @@ Simply Email
   
 DNS_LOOKUP_AD.sh
   ++++++++++ need ++++++++++
+  
+ -------------- MASSCAN -------------- 
+ masscan -e tun0 -p1-65535,U:1-65535 <IP ADDRESS> --rate=1000
  
  -------------- NMAP --------------
  Zone Transfer
